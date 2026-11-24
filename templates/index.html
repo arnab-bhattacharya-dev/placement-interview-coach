@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Placement Interview Coach</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main class="w">
+  <h1>🎯 Placement Interview Coach</h1>
+  <p class="sub">Practise mock interviews with an AI interviewer. Get a score, feedback and a model answer after every question.</p>
+
+  <section class="card" id="setup">
+    <div class="g">
+      <div><label>Target role</label>
+        <select id="role">
+          <option>Software Developer</option>
+          <option>Cloud / DevOps Engineer</option>
+          <option>Data Analyst</option>
+          <option>ML Engineer</option>
+          <option>Cyber Security Analyst</option>
+          <option>HR / Behavioural round</option>
+        </select></div>
+      <div><label>Level</label>
+        <select id="lvl"><option>Fresher</option><option>Intermediate</option></select></div>
+    </div>
+    <div class="row"><button class="p" id="start">Start interview</button></div>
+  </section>
+
+  <section class="card" id="qcard" hidden>
+    <div class="mut" id="qmeta"></div>
+    <div class="qn" id="q"></div>
+    <textarea id="ans" placeholder="Type your answer as you would say it in an interview…"></textarea>
+    <div class="row">
+      <button class="p" id="sub">Submit answer</button>
+      <button id="skip">Skip</button>
+      <button id="end">End &amp; see results</button>
+    </div>
+  </section>
+
+  <section class="card" id="fb" hidden></section>
+  <section class="card" id="sum" hidden></section>
+</main>
+
+<footer>
+  <strong>Placement Interview Coach</strong> – GenAI Project · Flask + Google Gemini (free tier)<br>
+  Developed by <strong>Arnab</strong> · MCA, School of Computer Applications, Dayananda Sagar University, Bengaluru · 2026<br>
+  <span class="mut">AI feedback is a practice aid, not a real evaluation. Verify technical facts from trusted sources.</span>
+</footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
